@@ -1,10 +1,9 @@
 pipeline {
   agent any
-  parameters{
+  parameters {
     choice(name: 'tipo_execucao',
        choices: 'PorModulo\nCompleta\nMassaDados',
-       description: 'Qual o tipo de execucao?" 
-    )
+       description: 'Qual o tipo de execucao?')
   }
   stages {
     stage('Build') {
